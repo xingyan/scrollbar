@@ -1,0 +1,35 @@
+{
+  "name": "pc-game-scrollbar",
+  "version": "0.0.0",
+  "description": "a scrollbar",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xingyan/scrollbar.git"
+  },
+  "keywords": [
+    "widget"
+  ],
+  "author": "xingyan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xingyan/scrollbar/issues"
+  },
+  "homepage": "https://github.com/xingyan/scrollbar",
+  "dependencies": {
+    "browser-sync": "^2.7.10",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-g-require-css": "0.0.3",
+    "gulp-sequence": "^0.3.2",
+    "gulp-watch": "^4.2.4",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.9.11"
+  },
+  "devDependencies": {
+    "pc-game-util": "0.0.4"
+  }
+}
