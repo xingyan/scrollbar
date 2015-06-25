@@ -30,6 +30,7 @@
     "webpack": "^1.9.11"
   },
   "devDependencies": {
-    "pc-game-util": "0.0.4"
+    "game-hot-widget": "0.0.5",
+    "pc-game-util": "0.0.5"
   }
 }

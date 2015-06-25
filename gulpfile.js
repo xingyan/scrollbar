@@ -30,7 +30,7 @@ var browserSyncConfig = {
 }
 
 gulp.task('styles', function() {
-  return gulp.src(['./index.js', './src/index.js'])
+  return gulp.src(['./index.js'])
     .pipe(replace({
       name: '../css/scrollbar.css'
     }))
@@ -56,7 +56,7 @@ gulp.task('modules', ['styles'],  function() {
 });
 
 gulp.task('watch', ['browserSync'], function() {
-  watch('./src/scrollbar.less', function() {
+  watch(['./index.js', './scrollbar.less'], function() {
     gulp.start('modules');
   });
 });
@@ -64,7 +64,8 @@ gulp.task('watch', ['browserSync'], function() {
 
 gulp.task('webpack:development', function(callback) {
   var built = false
-  webpack(config).watch(1000, function(err, stats) {
+  webpack(config).watch(200, function(err, stats) {
+    browserSync.reload();
     if(!built) { built = true; callback() }
   })
 });
