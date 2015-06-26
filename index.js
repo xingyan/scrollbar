@@ -1,5 +1,3 @@
-require('./scrollbar.less');
-
 /**
  * 模拟滚动条组件
  * @module Scrollbar

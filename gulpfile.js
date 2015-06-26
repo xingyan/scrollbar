@@ -1,14 +1,19 @@
 var gulp = require('gulp');
 var gulpSequence = require('gulp-sequence');
 var del = require('del');
-var replace = require('gulp-g-require-css');
 var webpack      = require('webpack');
 var browserSync = require('browser-sync');
 var watch    = require('gulp-watch');
 
+var less = require('gulp-less'),
+  LessPluginAutoPrefix = require('less-plugin-autoprefix'),
+  autoprefix= new LessPluginAutoPrefix({ browsers: ["last 2 versions"] });
+
+
+
 var config =   {
   entry: {
-    scrollbar: ['./example/.tmp/index.js']
+    scrollbar: ['./index.js']
   },
   output: {
     path: './example',
@@ -30,11 +35,11 @@ var browserSyncConfig = {
 }
 
 gulp.task('styles', function() {
-  return gulp.src(['./index.js'])
-    .pipe(replace({
-      name: '../../dist/scrollbar.css'
+  return gulp.src(['./scrollbar.less'])
+    .pipe(less({
+      plugins: [autoprefix]
     }))
-    .pipe(gulp.dest('./example/.tmp'))
+    .pipe(gulp.dest('./dist'))
     .pipe(browserSync.reload({stream:true}));;
 });
 
@@ -42,7 +47,6 @@ gulp.task('clean', function(cb) {
   del([
     './dist',
     './example/js',
-    './example/css',
     './example/.tmp'
   ], cb);
 });
@@ -60,7 +64,6 @@ gulp.task('watch', ['browserSync'], function() {
     gulp.start('modules');
   });
 });
-
 
 gulp.task('webpack:development', function(callback) {
   var built = false

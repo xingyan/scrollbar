@@ -1,6 +1,6 @@
 {
   "name": "pc-game-scrollbar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a scrollbar",
   "main": "index.js",
   "scripts": {
@@ -23,9 +23,10 @@
     "browser-sync": "^2.7.10",
     "del": "^1.2.0",
     "gulp": "^3.9.0",
-    "gulp-g-require-css": "0.0.3",
+    "gulp-less": "^3.0.3",
     "gulp-sequence": "^0.3.2",
     "gulp-watch": "^4.2.4",
+    "less-plugin-autoprefix": "^1.4.2",
     "node-libs-browser": "^0.5.2",
     "webpack": "^1.9.11"
   },
