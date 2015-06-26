@@ -522,7 +522,7 @@ var scrollbar = widgetDefine("scrollBar", {
         pos[1] -= document.body.offsetTop;
       }
     }
-    el.parentNode ? parent = el.parentNode : parent = null;
+    parent = el.parentNode ? el.parentNode : null;
     while (parent && parent.tagName.toUpperCase() != 'BODY' && parent.tagName.toUpperCase() != 'HTML') { // account for any scrolled ancestors
       pos[0] -= parent.scrollLeft;
       pos[1] -= parent.scrollTop;
