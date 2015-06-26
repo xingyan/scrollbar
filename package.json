@@ -1,6 +1,6 @@
 {
   "name": "pc-game-scrollbar",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a scrollbar",
   "main": "index.js",
   "scripts": {
@@ -20,17 +20,6 @@
   },
   "homepage": "https://github.com/xingyan/scrollbar",
   "dependencies": {
-    "browser-sync": "^2.7.10",
-    "del": "^1.2.0",
-    "gulp": "^3.9.0",
-    "gulp-less": "^3.0.3",
-    "gulp-sequence": "^0.3.2",
-    "gulp-watch": "^4.2.4",
-    "less-plugin-autoprefix": "^1.4.2",
-    "node-libs-browser": "^0.5.2",
-    "webpack": "^1.9.11"
-  },
-  "devDependencies": {
     "game-hot-widget": "0.0.5",
     "pc-game-util": "0.0.5"
   }
