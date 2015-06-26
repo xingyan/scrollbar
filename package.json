@@ -1,6 +1,6 @@
 {
   "name": "pc-game-scrollbar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a scrollbar",
   "main": "index.js",
   "scripts": {
