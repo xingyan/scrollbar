@@ -5,7 +5,10 @@ require('./scrollbar.less');
  * @module Scrollbar
  */
 "use strict";
-console.log(require('game-hot-widget'));
+
+if(!$ && !JQuery) {
+  throw new Error('jQuery is undefined');
+}
 
 var
   /**
@@ -30,7 +33,6 @@ var
    * @type {exports}
    */
   widgetDefine = require('game-hot-widget').widgetDefine;
-
 
 /**
  * @desc 自定义滚动条
