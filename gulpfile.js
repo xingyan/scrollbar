@@ -25,14 +25,14 @@ var config =   {
 
 var browserSyncConfig = {
   server: {
-    baseDir: './example'
+    baseDir: './'
   }
 }
 
 gulp.task('styles', function() {
   return gulp.src(['./index.js'])
     .pipe(replace({
-      name: '../css/scrollbar.css'
+      name: '../../dist/scrollbar.css'
     }))
     .pipe(gulp.dest('./example/.tmp'))
     .pipe(browserSync.reload({stream:true}));;
