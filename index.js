@@ -172,6 +172,7 @@ var scrollbar = widgetDefine("scrollBar", {
     $(document).on("mousedown", util.bind(this.downFunc, this));
     $(document).on("mousemove", util.bind(this.moveFunc, this));
     $(document).on("mouseup", util.bind(this.upFunc, this));
+    $(window).on('resize', util.bind(this.resize, this));
     //滑轨点击监听
     this.track.on("mousedown", util.bind(this.onClickTrack, this));
     //鼠标滚轮事件监听
